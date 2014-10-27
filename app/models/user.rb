@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :guests
+  has_many :hosts
+  
   attr_accessor :password
   before_save :encrypt_password
   
